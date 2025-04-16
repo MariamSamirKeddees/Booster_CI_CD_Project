@@ -23,7 +23,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./simpleApp
+          file: ./simpleApp/Dockerfile
           push: true
           tags: mariamcontainerization/booster-ci-cd-project:latest
-        
+
